@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Career</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/3d-fluency/94/user-shield.png"
+      type="image/x-icon"
+    />
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+           font-family: sans-serif;
+       }
+
+       html{
+        scroll-behavior: smooth;
+       }
+
+       ::-webkit-scrollbar{
+           width: 1em;
+
+       }
+       ::-webkit-scrollbar-track{
+           background:rgb(207, 207, 207);
+           border-radius: 10px;
+           margin-block:7em;
+       }
+       ::-webkit-scrollbar-thumb{
+           background: rgb(53, 80, 131);
+           /* border: .2em solid rgb(166, 166, 166); */
+           border-radius: 10px;
+       }
+
+       ::-webkit-scrollbar-thumb:hover{
+           background: rgb(141, 200, 255);
+       }
+
+       body{
+          width: 100%;
+
+       }
+
+
+       #myBtn {
+             /* display: none; */
+             position: fixed; /* Fixed/sticky position */
+             bottom: 60px; /* Place the button at the bottom of the page */
+             right: 15px; /* Place the button 30px from the right */
+             z-index: 99; /* Make sure it does not overlap */
+             border: none; /* Remove borders */
+             outline: none; /* Remove outline */
+             background-color: rgb(49, 143, 231);; /* Set a background color */
+             color: white; /* Text color */
+             cursor: pointer; /* Add a mouse pointer on hover */
+             padding: 15px; /* Some padding */
+             border-radius: 10px; /* Rounded corners */
+             font-size: 18px; /* Increase font size */
+         }
+
+         #myBtn:hover {
+             background-color: #555; /* Add a dark-grey background on hover */
+         }
+
+       .container{
+           width: 60%;
+
+           /* background-color: rgb(193, 193, 193); */
+           /* background: url(images/back.jpg); */
+           margin: auto;
+       }
+       .t1{color: rgb(43, 92, 255);}
+       .t2{color: rgb(217, 9, 9);}
+       .t3{color: rgb(255, 234, 7);}
+       .t4{color: rgb(43, 92, 255);}
+       .t5{color: rgb(0, 169, 34);}
+       .t6{color: rgb(255, 12, 12);}
+       .t7{color: rgb(99, 99, 99);}
+       span{
+           margin: 0;
+           padding: 0;
+       }
+
+
+       .navcon{
+           padding: 15px;
+           border-bottom: 1px solid rgb(205, 205, 205);
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+       }
+       .navleft{
+           display: flex;
+           align-items: center;
+           gap: 50px;
+       }
+       .navright .but{
+
+           border: none;
+           background-color: rgb(38, 110, 236);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 5px;
+           color: white;
+       }
+       .but a{
+           padding: 7px 15px;
+           color: white;
+           text-decoration: none;
+           font-size: 15px;
+       }
+       .navleft :link{
+           text-decoration: none;
+       }
+       .logo{
+           width: 150px;
+           margin-left: 30px;
+       }
+       .navleft a{
+           font-size: 13px;
+           color: rgb(112, 112, 112);
+       }
+       .navleft a:hover{
+       color: rgb(0, 138, 197);
+       cursor: pointer;
+       }
+
+       /* ------------top -----------  */
+       .top{
+
+           background-color: rgb(248, 248, 248);
+           border-radius: 30px;
+           padding: 30px;
+           margin: auto;
+           margin-top: 50px;
+           margin-bottom: 50px;
+           display: flex;
+           justify-content: space-between;
+       }
+       .heading h1{font-size: 80px;}
+       .chtext::before{
+           content:  ' ';
+           animation: animate infinite 6s;
+       }
+       @keyframes animate{
+           0%{
+               content: 'Build';
+               color: rgb(18, 127, 195);
+           }
+           24%{
+               content: 'Build';
+               color: rgb(18, 127, 195);
+           }
+
+           25%{
+               content: 'Create';
+               color: rgb(13, 176, 13);
+           }
+           49%{
+               content: 'Create';
+               color: rgb(13, 176, 13);
+           }
+           50%{
+               content: 'Design';
+               color: orange;
+           }
+           74%{
+               content: 'Design';
+               color: orange;
+           }
+           75%{
+               content:'Code' ;
+               color: red;
+           }
+           100%{
+               content:'Code' ;
+               color: red;
+           }
+       }
+
+       .injobloc{
+           width: 100%;
+           height: 150px;
+           margin-top: 50px;
+           /* background-color: gray; */
+           display: flex;
+           flex-direction: column;
+       }
+       .inhead{
+           width: 100%;
+           height: 50%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .inhead p{
+           width: 50%;
+           padding-left: 30px;
+       }
+       .injobloc .insub{
+           width: 100%;
+           height: 33%;
+       }
+       .find p{
+           font-size: 30px;
+           font-weight: 200;
+       }
+
+       .input{
+           /* background-color: antiquewhite; */
+           border: 1px solid rgb(60, 60, 60);
+           border-radius: 25px;
+           overflow: hidden;
+           display: flex;
+           align-items: center;
+           justify-content:center;
+           /* gap: 5px; */
+           width: 100%;
+           height: 40px !important;
+       }
+
+       .input .svgcon{
+           width:10%;
+           padding-left: 10px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .input .firstinput{
+           width:30%;
+           display: flex;
+           align-items: center;
+           height: 100%;
+           }
+       .firstinput:hover{
+           border-bottom: 4px solid rgb(0, 140, 255);
+       }
+       .input .cenin{
+           width:10%;
+       }
+       .input .secinput{
+           width:30%;
+           height: 100%;
+           display: flex;
+           align-items: center;
+           padding-left: 10px;
+       }
+       .secinput:hover{
+           border-bottom: 4px solid rgb(0, 140, 255);
+       }
+       .input .search{width:20%}
+       .svgcon svg{
+           width:20px;
+       }
+       .firstinput input{
+           outline: none;
+           border: none;
+           height: 30px;
+           font-size: 15px;
+           /* background-color: antiquewhite; */
+       }
+       .secinput input{
+           outline: none;
+           border: none;
+           height: 30px;
+           font-size: 15px;
+           /* background-color: antiquewhite; */
+       }
+       .cenin{
+           height: 100%;
+           border : 1px solid grey;
+           width: 30px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color: rgb(231, 231, 231);
+       }
+       .search{
+           width: 100%;
+           height: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           color: rgb(0, 123, 255);
+           font-family: poppins;
+       }
+
+       .spotlight{
+           width: 100%;
+           border-radius: 20px;
+           background-color: rgb(248, 248, 248);
+           margin-bottom: 50px;
+
+       }
+       .spotlight .he{
+           padding-left: 20px;
+           padding-top: 20px;
+           font-size: 13px;
+           color: rgb(167, 167, 167);
+           letter-spacing: 2px;
+       }
+       .spotcon{
+           width: 100%;
+           height: 300px;
+           display: flex;
+           /* gap: 18px; */
+           justify-content: space-evenly;
+
+           align-items: center;
+       }
+       .spotcon .box{
+           width: 18%;
+           height: 250px;
+           border-radius: 10px;
+           overflow: hidden;
+           background-color: white;
+       }
+       .box .boximg{
+           height: 40%;
+           overflow: hidden;
+       }
+       .boximg img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+       }
+       .box .boxtext{
+           padding: 12px;
+       }
+       .boxtext h4{
+           color: rgb(39, 39, 39);
+       }
+       .boxtext p{
+           padding-top: 10px;
+           font-size: 13px;
+           color: grey;
+           line-height: 1.4;
+       }
+
+       .team{
+           width: 100%;
+           border-radius: 20px;
+           background-color: rgb(248, 248, 248);
+           margin-bottom: 50px;
+       }
+
+       .team .teamcon{
+           display: flex;
+           justify-content: space-between;
+           padding: 50px;
+       }
+       .team .teamcon .image img{
+           border-radius: 20px;
+       }
+       .teamtextcon{
+           width: 45%;
+       }
+       .teamtextcon .teamfindp{
+           font-size: 50px;
+           /* color: darkblue; */
+           font-family: poppins;
+       }
+       .teamsmallhead{
+           color: rgba(130, 130, 130, 0.692);
+           font-size: 13px;
+           letter-spacing: 2px;
+       }
+       .teamtoptext{
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+       }
+       .toge{
+           color: grey;
+       }
+       .comgrid{
+           width: 100%;
+           margin-top: 40px;
+           display: grid;
+           grid-template-columns:180px 180px ;
+           grid-template-rows:120px 120px;
+           justify-content: space-between;
+           column-gap: 10px;
+           row-gap: 10px;
+
+       }
+       .gbox{
+           width: 100%;
+           height: 100%;
+       }
+       .comgrid p{
+           margin-bottom: 10px;
+       }
+       .comgrid .gbox p{
+           color: rgb(0, 146, 204);
+           font-size: 17px;
+           font-weight: bold
+       }
+       .comgrid .gbox p:hover{
+           cursor: pointer;
+       }
+       .comgrid .gbox span{
+           font-size: 14px;
+           line-height: 20px;
+           color: grey;
+       }
+
+       .teamtextcon a{
+           text-decoration: none;
+           color: rgb(0, 146, 204);
+       }
+       .locgrid{
+           width: 100%;
+           margin-top: 40px;
+           display: grid;
+           grid-template-columns:120px 100px 100px ;
+           grid-template-rows:100px 100px;
+           justify-content: space-between;
+           column-gap: 10px;
+           row-gap: 10px;
+       }
+       .locgrid p{
+           margin-bottom: 10px;
+       }
+       .locgrid .gbox p{
+           color: rgb(0, 146, 204);
+           font-size: 17px;
+           font-weight: bold
+       }
+       .locgrid .gbox p:hover{
+           cursor: pointer;
+       }
+       .locgrid .gbox span{
+           font-size: 14px;
+           line-height: 20px;
+           color: grey;
+       }
+       /* ------------down images -------- */
+      .downimg{
+       width: 100%;
+       overflow: hidden;
+       margin-bottom:40px;
+      }
+       .downtext{
+           margin-bottom: 50px;
+           text-align: center;
+       }
+       .ler{
+           font-size: 12px;
+           letter-spacing: 2px;
+           margin-bottom: 10px;
+       }
+       .downimage{
+           display: flex;
+           justify-content: center;
+       }
+       .dimgcon{
+           width: 100%;
+           height: fit-content;
+           /* background-color: green; */
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 400px 400px;
+           gap: 20px;
+
+       }
+       .working{
+           font-size: 50px;
+       }
+
+       .dimg{
+           width: 100%;
+           height:100%;
+           background-color: red;
+           border-radius: 20px;
+       }
+       .dimg1{
+           background: linear-gradient(rgba(74, 7, 190, 0),rgba(74, 7, 190, 0),rgba(0, 0, 0, .500)),url(images/dimg1.jfif);
+           background-position: center;
+           background-size: cover;
+
+       }
+       .dimg2{
+           background: linear-gradient(rgba(74, 7, 190, 0),rgba(74, 7, 190, 0),rgba(0, 0, 0, .500)),url(images/dimg2.jfif);
+           background-position: center;
+           background-position-x: 1px;
+           background-size: cover;
+       }
+       .dimg3{
+           background: linear-gradient(rgba(74, 7, 190, 0),rgba(74, 7, 190, 0),rgba(0, 0, 0, .500)),url(images/dimg3.jfif);
+           background-position: center;
+           background-position-x: 1px;
+           background-size: cover;
+       }
+       .dimg4{
+           background: linear-gradient(rgba(74, 7, 190, 0),rgba(74, 7, 190, 0),rgba(0, 0, 0, .500)),url(images/dimg4.webp);
+           background-position: center;
+           background-size: cover;
+       }
+       .dimgtext{
+           width: 100%;
+           height: 92%;
+           width: 73%;
+           padding-left: 20px;
+           display: flex;
+           flex-direction: column;
+           justify-content: end;
+       }
+       .fdimgtext{
+           color: white;
+           font-size: 30px;
+       }
+       .sdimgtext{
+           color: white;
+           font-size: 12px;
+           padding-top: 10px;
+       }
+       /* ---------------Footer ------------ */
+       .footer{
+           width: 100%;
+           height: 270px;
+
+           display: flex;
+           justify-content: center;
+           margin-bottom: 40px;
+
+       }
+
+       .footcon{
+           width: 60%;
+           height: fit-content;
+           /* background-color: rgb(248, 248, 248); */
+           border-radius: 20px;
+           /* background-color: red; */
+
+       }
+       .socbor{
+           width: 100%;
+           border-bottom :1px solid rgb(190, 190, 190);
+
+       }
+       .social{
+           width: 40%;
+           padding: 20px 0 20px 10px;
+
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+       .social p{
+           font-size: 18px;
+       }
+       .logos{
+           width: 50%;
+           display: flex;
+           justify-content: space-evenly;
+       }
+       .footgrid{
+           border-bottom: 1px solid rgb(201, 201, 201);
+       }
+       .footgridcon{
+           width: 100%;
+           padding: 20px;
+           display: grid;
+           grid-template-columns: 25% 25% 50%;
+       }
+       .footgridcon .Opportunity .opppara{
+           width: 90%;
+       }
+       .about{
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+       }
+       .about a{
+           text-decoration: none;
+           color: rgb(153, 153, 153);
+           font-size: 13px;
+       }
+
+       .about .ahead{
+           font-size: 20px;
+       }
+       .rinfo{
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+       }
+       .rinfo a{
+           text-decoration: none;
+           color: rgb(153, 153, 153);
+           font-size: 13px;
+       }
+
+       .rinfo .infohead{
+           font-size: 20px;
+       }
+       .Opportunity{
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+       }
+       .Opportunity .opppara{
+           text-decoration: none;
+           color: rgb(153, 153, 153);
+           font-size: 13px;
+           line-height: 1.3;
+       }
+       .Opportunity .ophead{
+           font-size: 20px;
+       }
+
+
+       @media only screen and (max-width: 600px) {
+           body{
+               width: 100%;
+
+           }
+           .container{
+               width: 80%;
+               /* background-color: rebeccapurple; */
+           }
+
+           .top{
+               display: grid;
+               grid-template-columns: 100px;
+           }
+           .top .headimg img{
+               width: 350px;
+           }
+
+           .top .heading{
+               width: 350px;
+               margin-bottom: 30px;
+           }
+           .insub{
+               margin-bottom: 30px;
+           }
+           .input{
+               height: 100px;
+           }
+       }
+
+       .prebtn{
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            padding: 5px 10px;
+            border: none;
+            background-color: rgb(0, 138, 197);
+            color: white;
+            border-radius: 5px;
+        }
+
+        .nxtbtn{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 5px 10px;
+            border: none;
+            background-color: rgb(0, 138, 197);
+            color: white;
+            border-radius: 5px;
+        }
+        
+        /* -----slide---- */
+        .slide{
+          width: 100%;
+          height: 500px;
+          
+        }
+        .mySlides img{
+          width: 100%;
+          height: 350px;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+        .slide h2{
+          text-align: center;
+          font-size: 50px;
+          margin-bottom: 20px;
+          font-weight: 400;
+        }
+        .slideshow-container {
+            width: 100%;
+            /* max-width: 1000px; */
+            position: relative;
+            /* margin: auto; */
+          }
+
+          /* Hide the images by default */
+          .mySlides {
+            width: 100%;
+            display: none;
+          }
+
+          /* Next & previous buttons */
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+
+          /* Caption text */
+          .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+          }
+
+          /* Number text (1/3 etc) */
+          .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+          }
+
+          /* The dots/bullets/indicators */
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      /* ---- pop up ------- */
+      #enq{
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: none;
+        background-color: rgb(0, 126, 230);
+        color: white;
+        border-radius: 5px;
+        font-size: 17px;
+      }
+
+      #enq:hover{
+        cursor: pointer;
+      }
+
+
+      .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 730px;
+  top: 300px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content textarea{
+  padding: 10px;
+  outline: none;
+}
+
+.modal-content button{
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  margin-top: 15px;
+
+}
+
+.modal-content button:hover{
+  background-color: rgb(0, 138, 197);
+  cursor: pointer;
+}
+
+.spotcon .box:hover .boximg img{
+  transition: .2s;
+  transform: scale(1.2);
+} 
+    </style>
+
+    <script>
+      // Get the button:
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <div class="btnpn">
+      <button onclick="history.back()" class="prebtn">Previous</button>
+      <button onclick="history.forward()" class="nxtbtn">Next</button>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <nav>
+      <div class="navcon">
+        <div class="navleft">
+          <img src="images/glogo.png" alt="" class="logo" />
+          <a href="#team">Teams</a>
+          <a href="#locations">Locations</a>
+          <a href="#learn">Learn</a>
+          <a href="#sl">Working space</a>
+          <a>Students</a>
+        </div>
+        <div class="navright">
+          <div class="but">
+            <a href="signin.html">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="top">
+        <div class="heading">
+          <h1 class="chtext"></h1>
+          <h1>for everyone</h1>
+          <div class="injobloc">
+            <div class="find insub">
+              <p>Find Your Next Job at Google</p>
+            </div>
+            <div class="inhead insub">
+              <p>Role</p>
+              <p>Where ?</p>
+            </div>
+            <div class="input insub">
+              <div class="svgcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </div>
+              <div class="firstinput">
+                <input type="" placeholder="Software engineer" />
+              </div>
+              <div class="cenin">
+                <p>in</p>
+              </div>
+              <div class="secinput">
+                <input type="text" placeholder="Los Anogolos" />
+              </div>
+              <div class="search">
+                <p>Search</p>
+              </div>
+            </div>
+          </div>
+          
+          <button id="enq">Enquriy</button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <textarea name="" id="" cols="50" rows="10" placeholder="Enter your querys....."></textarea>
+              <button class="sub">Submit</button>
+            </div>
+
+          </div>  
+
+          <script>
+                              // Get the modal
+                  var modal = document.getElementById("myModal");
+
+                  // Get the button that opens the modal
+                  var btn = document.getElementById("enq");
+
+                  // Get the <span> element that closes the modal
+                  var span = document.getElementsByClassName("close")[0];
+                  var sub = document.getElementsByClassName("sub")[0];
+
+                  // When the user clicks the button, open the modal 
+                  btn.onclick = function() {
+                    modal.style.display = "block";
+                  }
+
+                  sub.onclick = function(){
+                    modal.style.display = "none";
+                  }
+
+                  // When the user clicks on <span> (x), close the modal
+                  span.onclick = function() {
+                    modal.style.display = "none";
+                  }
+
+                  // When the user clicks anywhere outside of the modal, close it
+                  window.onclick = function(event) {
+                    if (event.target == modal) {
+                      modal.style.display = "none";
+                    }
+                  }
+          </script>
+        </div>
+        <div class="headimg">
+          <img src="images/index main image.png" alt="" />
+        </div>
+      </section>
+
+      <section class="spotlight">
+        <p class="he">SPOTLIGHT</p>
+        <div class="spotcon">
+          <div class="box box1">
+            <div class="boximg img1">
+              <img src="images/box1.jpg" alt="" />
+            </div>
+            <div class="boxtext">
+              <h4>Google Cloud Roles</h4>
+              <p>
+                Help millions build what’s next for their business — explore
+                engineering jobs with Google Cloud.
+              </p>
+            </div>
+          </div>
+          <div class="box box2">
+            <div class="boximg img1">
+              <img src="images/box2.jpg" alt="" />
+            </div>
+            <div class="boxtext">
+              <h4>Remote-eligible Roles</h4>
+              <p>Find jobs that are eligible for remote work.</p>
+            </div>
+          </div>
+          <div class="box box3">
+            <div class="boximg img1">
+              <img src="images/box3.jpg" alt="" />
+            </div>
+            <div class="boxtext">
+              <h4>Consumer Hardware</h4>
+              <p>
+                Design and build the systems that are the heart of the world's
+                largest and most powerful computing infrastructure and products.
+              </p>
+            </div>
+          </div>
+          <div class="box box4">
+            <div class="boximg img1">
+              <img src="images/box4.jpg" alt="" />
+            </div>
+            <div class="boxtext">
+              <h4>Platforms & Ecosystems</h4>
+              <p>
+                Work on our innovative software products that have an impact on
+                people’s lives across the world.
+              </p>
+            </div>
+          </div>
+          <div class="box box5">
+            <div class="boximg img1">
+              <img src="images/box5.jpg" alt="" />
+            </div>
+            <div class="boxtext">
+              <h4>Site Reliability Engineer</h4>
+              <p>
+                Work at the intersection of software and systems engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team" id="team">
+        <div class="teamcon">
+          <div class="image">
+            <img src="images/page 1.webp" alt="" />
+          </div>
+          <div class="teamtextcon">
+            <div class="teamtoptext">
+              <p class="teamsmallhead">TEAMS</p>
+              <p class="teamfindp">Find your team</p>
+              <p class="toge">
+                Together, we create access to information and build products for
+                everyone. Want to be a Googler? Find your team.
+              </p>
+            </div>
+            <div class="comgrid">
+              <div class="gbox gbox1">
+                <p>Engineering & Tech</p>
+                <span
+                  >Develop the products and tools of the future for billions of
+                  users.
+                </span>
+              </div>
+              <div class="gbox gbox2">
+                <p>Sales, Service & Support</p>
+                <span
+                  >Equip businesses with the right tools to help them
+                  grow.</span
+                >
+              </div>
+              <div class="gbox gbox3">
+                <p>People</p>
+                <span
+                  >Find, grow, and support the people who make Google great.
+                </span>
+              </div>
+              <div class="gbox gbox4">
+                <p>Consumer Hardware</p>
+                <span>Make people's lives better through technology.</span>
+              </div>
+            </div>
+            <a href="">View all teams</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="team" id="locations">
+        <div class="teamcon">
+          <div class="teamtextcon">
+            <div class="teamtoptext">
+              <p class="teamsmallhead">LOCATIONS</p>
+              <p class="teamfindp">Our locations</p>
+              <p class="toge">
+                Large or small, each one of our offices is designed to inspire
+                innovation, big ideas, and community.
+              </p>
+            </div>
+            <div class="locgrid">
+              <div class="gbox gbox1">
+                <p>Mountain View</p>
+                <span>324 jobs</span>
+              </div>
+              <div class="gbox gbox2">
+                <p>New York</p>
+                <span>243 jobs</span>
+              </div>
+              <div class="gbox gbox3">
+                <p>London</p>
+                <span>1 jobs</span>
+              </div>
+              <div class="gbox gbox4">
+                <p>Dublin</p>
+                <span>1 jobs</span>
+              </div>
+              <div class="gbox gbox5">
+                <p>Singapore</p>
+                <span>50 jobs</span>
+              </div>
+              <div class="gbox gbox6">
+                <p>Hyderabad</p>
+                <span>10 jobs</span>
+              </div>
+            </div>
+            <a href="">View all locations</a>
+          </div>
+          <div class="image">
+            <img src="images/page 2.webp" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- --------------- slide ---------------------- -->
+
+      <section class="slide" id="sl">
+        <h2>Working space</h2>
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="office photos/01.jpg" style="width:100%">
+            <div class="text">Indoor</div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="office photos/02.jpg" style="width:100%">
+            <div class="text">Office</div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="office photos/03.jpg" style="width:100%">
+            <div class="text">Meeting Space</div>
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+
+      <script>
+        
+      // ---------- slider ---------------
+      // let slideIndex = 0;
+      //   showSlides();
+
+      //   function showSlides() {
+      //     let i;
+      //     let slides = document.getElementsByClassName("mySlides");
+      //     for (i = 0; i < slides.length; i++) {
+      //       slides[i].style.display = "none";
+      //     }
+      //     slideIndex++;
+      //     if (slideIndex > slides.length) {slideIndex = 1}
+      //     slides[slideIndex-1].style.display = "block";
+      //     setTimeout(showSlides, 2000); // Change image every 2 seconds
+      //   }
+
+      let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+       </script>
+      <!-- -------------------finish slide ------------ -->
+      <section class="downimg" id="learn">
+        <div class="downtext">
+          <p class="ler">LEARN</p>
+          <p class="working">Working at Google</p>
+        </div>
+
+        <div class="downimage">
+          <div class="dimgcon">
+            <div class="dimg dimg1">
+              <div class="dimgtext">
+                <p class="fdimgtext">
+                  Learn how we're building a more diverse and inclusive Google
+                </p>
+                <p class="sdimgtext">Read about our efforts</p>
+              </div>
+            </div>
+            <div class="dimg dimg2">
+              <div class="dimgtext">
+                <p class="fdimgtext">
+                  Our commitment to hiring people with disabilities
+                </p>
+                <p class="sdimgtext">Learn more</p>
+              </div>
+            </div>
+            <div class="dimg dimg3">
+              <div class="dimgtext">
+                <p class="fdimgtext">Take a look side our hiring Process</p>
+                <p class="sdimgtext">See how we hire</p>
+              </div>
+            </div>
+            <div class="dimg dimg4">
+              <div class="dimgtext">
+                <p class="fdimgtext">Visit our path to Google blog</p>
+                <p class="sdimgtext">Learn more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="footcon">
+        <div class="socbor">
+          <div class="social">
+            <p>Follow Life at Google on</p>
+            <div class="logos">
+              <a
+                href="https://www.instagram.com/lifeatgoogle"
+                aria-label="View our Instagram feed (Opens in a new window)"
+                data-gtm-ref="footer-social-instagram-link"
+                target="_blank"
+                class="gc-h-larger-tap-target"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="presentation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gc-icon"
+                >
+                  <g>
+                    <path
+                      d="M21.2,0H2.4C1.1,0,0,1.1,0,2.4v18.8c0,1.3,1.1,2.4,2.4,2.4h18.8c1.3,0,2.4-1.1,2.4-2.4V2.4   C23.5,1.1,22.5,0,21.2,0z M19.6,15c0,0.8-0.2,1.4-0.4,1.9c-0.2,0.5-0.5,1-0.9,1.4s-0.9,0.7-1.4,0.9c-0.5,0.2-1.1,0.3-1.9,0.4   c-0.8,0-1.1,0-3.3,0s-2.4,0-3.3,0c-0.8,0-1.4-0.2-1.9-0.4c-0.5-0.2-1-0.5-1.4-0.9s-0.7-0.9-0.9-1.4c-0.2-0.5-0.3-1.1-0.4-1.9   c0-0.8,0-1.1,0-3.3s0-2.4,0-3.3c0-0.8,0.2-1.4,0.4-1.9c0.2-0.5,0.5-1,0.9-1.4s0.9-0.7,1.4-0.9c0.5-0.2,1.1-0.3,1.9-0.4   c0.8,0,1.1,0,3.3,0s2.4,0,3.3,0c0.8,0,1.4,0.2,1.9,0.4c0.5,0.2,1,0.5,1.4,0.9s0.7,0.9,0.9,1.4c0.2,0.5,0.3,1.1,0.4,1.9   c0,0.8,0,1.1,0,3.3S19.6,14.2,19.6,15z"
+                    ></path>
+                    <path
+                      d="M17.9,7.1c-0.1-0.4-0.3-0.6-0.6-0.9s-0.5-0.4-0.9-0.6c-0.3-0.1-0.7-0.2-1.5-0.3c-0.8,0-1.1,0-3.2,0   s-2.4,0-3.2,0c-0.8,0-1.2,0.2-1.5,0.3C6.7,5.7,6.5,5.9,6.2,6.2S5.7,6.7,5.6,7.1C5.5,7.4,5.4,7.8,5.3,8.6c0,0.8,0,1.1,0,3.2   s0,2.4,0,3.2c0,0.8,0.2,1.2,0.3,1.5c0.1,0.4,0.3,0.6,0.6,0.9s0.5,0.4,0.9,0.6c0.3,0.1,0.7,0.2,1.5,0.3c0.8,0,1.1,0,3.2,0   s2.4,0,3.2,0c0.8,0,1.2-0.2,1.5-0.3c0.4-0.1,0.6-0.3,0.9-0.6s0.4-0.5,0.6-0.9c0.1-0.3,0.2-0.7,0.3-1.5c0-0.8,0-1.1,0-3.2   s0-2.4,0-3.2C18.1,7.8,18,7.4,17.9,7.1z M11.8,15.8c-2.2,0-4.1-1.8-4.1-4.1s1.8-4.1,4.1-4.1s4.1,1.8,4.1,4.1S14,15.8,11.8,15.8z    M16,8.5c-0.5,0-0.9-0.4-0.9-0.9C15,7,15.4,6.6,16,6.6c0.5,0,0.9,0.4,0.9,0.9C16.9,8.1,16.5,8.5,16,8.5z"
+                    ></path>
+                    <circle cx="11.8" cy="11.8" r="2.6"></circle>
+                  </g></svg
+              ></a>
+              <a
+                href="https://twitter.com/lifeatgoogle"
+                aria-label="View our Twitter feed (Opens in a new window)"
+                data-gtm-ref="footer-social-twitter-link"
+                target="_blank"
+                class="gc-h-larger-tap-target"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="presentation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gc-icon"
+                >
+                  <g>
+                    <path
+                      d="M21.9998024,5.94850271 C21.2639378,6.27899473 20.4732072,6.50243431 19.6431192,6.60281913 C20.4903254,6.08859695 21.1409646,5.27418342 21.4472639,4.3038956 C20.6544849,4.7801123 19.7764073,5.12586577 18.8417079,5.31226298 C18.0932607,4.50466524 17.0268825,4 15.8467486,4 C13.5805579,4 11.7434203,5.86056413 11.7434203,8.15526483 C11.7434203,8.48101542 11.7797051,8.7980981 11.8496412,9.10221596 C8.43952817,8.92893175 5.41611168,7.27461954 3.39235612,4.76062801 C3.03916454,5.37434599 2.83681824,6.08815245 2.83681824,6.84966948 C2.83681824,8.29128441 3.5611975,9.5631712 4.66217788,10.3083896 C3.98959225,10.2868309 3.35687602,10.099841 2.8036791,9.78861106 C2.80338648,9.80594689 2.80331333,9.8233568 2.80331333,9.8408408 C2.80331333,11.8541677 4.21768905,13.5336687 6.09476916,13.9154273 C5.75042931,14.0103299 5.38794707,14.0610779 5.01376005,14.0610779 C4.74930529,14.0610779 4.49231233,14.0350742 4.241757,13.9865487 C4.76393626,15.637453 6.27926567,16.8388111 8.07477813,16.8724456 C6.67042461,17.9869023 4.9012479,18.6511461 2.97881179,18.6511461 C2.64763982,18.6511461 2.32100345,18.6315136 2,18.5931378 C3.81592266,19.7721223 5.97267373,20.4599991 8.28985336,20.4599991 C15.8371653,20.4599991 19.9642689,14.1282728 19.9642689,8.63711197 C19.9642689,8.45693788 19.9602454,8.2777269 19.9524178,8.0995531 C20.7540486,7.51369099 21.449678,6.78180786 21.9998024,5.94850271"
+                    ></path>
+                  </g></svg
+              ></a>
+              <a
+                href="https://www.youtube.com/lifeatgoogle"
+                aria-label="View our YouTube channel (Opens in a new window)"
+                data-gtm-ref="footer-social-youtube-link"
+                target="_blank"
+                class="gc-h-larger-tap-target"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="presentation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gc-icon"
+                >
+                  <g>
+                    <path
+                      d="M23.74,7.6062 C23.74,7.6062 23.51,5.9562 22.79,5.2362 C21.88,4.2762 20.86,4.2762 20.39,4.2162 C17.04,3.9712 12,4.0012 12,4.0012 C12,4.0012 6.98,3.9712 3.63,4.2112 C3.17,4.2712 2.15,4.2712 1.24,5.2312 C0.52,5.9512 0.28,7.6012 0.28,7.6012 C0.28,7.6012 0.04,9.5462 0,11.4812 L0,13.5062 C0.04,15.4462 0.28,17.3812 0.28,17.3812 C0.28,17.3812 0.52,19.0312 1.24,19.7612 C2.15,20.7112 3.34,20.6812 3.88,20.7812 C5.76,20.9612 11.79,21.0012 12,21.0012 C12,21.0012 17.05,21.0112 20.4,20.7712 C20.86,20.7112 21.88,20.7112 22.79,19.7512 C23.51,19.0312 23.75,17.3812 23.75,17.3812 C23.75,17.3812 23.99,15.4412 24,13.5062 L24,11.4812 C23.98,9.5462 23.74,7.6062 23.74,7.6062 L23.74,7.6062 Z M9.57,16.0012 L9.57,8.9912 L16,12.6312 L9.57,16.0012 L9.57,16.0012 Z"
+                    ></path>
+                  </g></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/google/jobs"
+                aria-label="View LinkedIn (Opens in a new window)"
+                data-gtm-ref="footer-social-linked-in-link"
+                target="_blank"
+                class="gc-h-larger-tap-target"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="presentation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gc-icon"
+                >
+                  <g>
+                    <path
+                      d="M19.3247508,19.0422222 L16.3116279,19.0422222 L16.3116279,14.4011111 C16.3116279,13.2944444 16.2901661,11.8705556 14.7443522,11.8705556 C13.1748173,11.8705556 12.9353488,13.0755556 12.9353488,14.3211111 L12.9353488,19.0422222 L9.92335548,19.0422222 L9.92335548,9.49833333 L12.8139203,9.49833333 L12.8139203,10.8022222 L12.8557143,10.8022222 C13.2578405,10.0516667 14.2422591,9.26055556 15.7090033,9.26055556 C18.7605316,9.26055556 19.3247508,11.2366667 19.3247508,13.8072222 L19.3247508,19.0422222 L19.3247508,19.0422222 Z M6.52335548,8.19277778 C5.55418605,8.19277778 4.77365449,7.42222222 4.77365449,6.47277778 C4.77365449,5.52444444 5.55418605,4.75333333 6.52335548,4.75333333 C7.48800664,4.75333333 8.27136213,5.52444444 8.27136213,6.47277778 C8.27136213,7.42222222 7.48800664,8.19277778 6.52335548,8.19277778 L6.52335548,8.19277778 Z M5.01312292,9.49833333 L8.03189369,9.49833333 L8.03189369,19.0422222 L5.01312292,19.0422222 L5.01312292,9.49833333 Z M20.5183745,2 L3.47495903,2 C2.66109275,2 2,2.64555556 2,3.44111111 L2,20.5566667 C2,21.3533333 2.66109275,22 3.47495903,22 L20.5183745,22 C21.3339074,22 22,21.3533333 22,20.5566667 L22,3.44111111 C22,2.64555556 21.3339074,2 20.5183745,2 L20.5183745,2 Z"
+                    ></path>
+                  </g></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/lifeatgoogle/"
+                aria-label="View our Facebook (Opens in a new window)"
+                data-gtm-ref="footer-social-facebook-link"
+                target="_blank"
+                class="gc-h-larger-tap-target"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  role="presentation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gc-icon"
+                >
+                  <g>
+                    <rect fill="none" height="24" width="24"></rect>
+                    <path
+                      d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"
+                    ></path>
+                  </g></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footgrid">
+          <div class="footgridcon">
+            <div class="about">
+              <p class="ahead">More about us</p>
+              <a href="">About us</a>
+              <a href="">Contact us</a>
+              <a href="">Press</a>
+            </div>
+            <div class="rinfo">
+              <p class="infohead">Related information</p>
+              <a href="">Investor relations</a>
+              <a href="">Blog</a>
+            </div>
+            <div class="Opportunity">
+              <p class="ophead">Equal Opportunity</p>
+              <p class="opppara">
+                Google is proud to be an equal opportunity workplace and is an
+                affirmative action employer. We are committed to equal
+                employment opportunity regardless of race, color, ancestry,
+                religion, sex, national origin, sexual orientation, age,
+                citizenship, marital status, disability, gender identity or
+                Veteran status. We also consider qualified applicants regardless
+                of criminal histories, consistent with legal requirements. See
+                also Google's EEO Policy and Know your rights: workplace
+                discrimination is illegal. If you have a need that requires
+                accommodation, please let us know by completing our
+                Accommodations for Applicants form.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
